@@ -1,0 +1,11 @@
+# Dependency directories
+node_modules/
+
+# npm cache
+.npm
+
+# VSC
+.vscode/*
+
+# Mac specific
+.DS_Store
