@@ -11,4 +11,10 @@ contract Registration {
     uint public timestamp;
     string public hashed_ident;
     string public ident_type;
+
+    constructor(bool _valid, string memory _name,string memory _DOB,string memory _addr,
+    string memory _party, string memory _transaction_type, uint _timestamp, string memory _hashed_ident,
+    string memory _ident_type){
+
+    }
 }
