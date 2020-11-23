@@ -7,7 +7,8 @@ contract Registration {
     string public addr;
     string public state;
     string public party;
+    string public transaction_type;
     uint public timestamp;
-    string public DLN;
-    uint public SSN;
+    string public hashed_ident;
+    string public ident_type;
 }
