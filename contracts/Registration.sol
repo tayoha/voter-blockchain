@@ -1,4 +1,5 @@
-pragma solidity ^0.5.0;
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity >=0.4.22 <0.8.0;
 
 contract Registration {
     bool public valid;
