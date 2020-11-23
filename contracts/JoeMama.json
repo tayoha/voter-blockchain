@@ -1,0 +1,11 @@
+{
+	"valid": 0,
+	"name": "Joe",
+	"DOB": "01/01/1980",
+	"addr": "25 Main St. Ann Arbor, MI 48104",
+	"party": "Green",
+	"transaction_type": "registration",
+	"timestamp": "06:08:2640",
+	"hashed_ident": "X824458IHFE",
+	"ident_type": "SSN"
+}

@@ -6,7 +6,6 @@ contract Registration {
     string public name;
     string public DOB;
     string public addr;
-    string public state;
     string public party;
     string public transaction_type;
     uint public timestamp;
