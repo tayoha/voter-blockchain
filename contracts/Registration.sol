@@ -15,6 +15,15 @@ contract Registration {
     constructor(bool _valid, string memory _name,string memory _DOB,string memory _addr,
     string memory _party, string memory _transaction_type, uint _timestamp, string memory _hashed_ident,
     string memory _ident_type){
+        valid = _valid;
+        name = _name;
+        DOB = _DOB;
+        addr = _addr;
+        party = _party;
+        transaction_type = _transaction_type;
+        timestamp = _timestamp;
+        hashed_ident = _hashed_ident;
+        ident_type = _ident_type;
 
     }
 }
