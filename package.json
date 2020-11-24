@@ -4,7 +4,8 @@
   "description": "Summary placeholder",
   "main": "truffle-config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "homepage": "https://github.com/tayoha/voter-blockchain#readme",
   "dependencies": {
     "web3": "^1.3.0"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1"
   }
 }
