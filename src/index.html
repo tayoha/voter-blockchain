@@ -30,7 +30,7 @@
     </form> -->
 
     <!-- https://designsystem.digital.gov/components/form-templates/ -->
-    <form class="usa-form">
+    <form class="usa-form" onSubmit="App.createTask(); return false;">
       <fieldset class="usa-fieldset">
         <legend class="usa-legend">Name</legend>
         <label class="usa-label" for="title">Title <span class="usa-hint">(optional)</span></label>
@@ -44,6 +44,7 @@
     
         <label class="usa-label" for="last-name">Last name</label>
         <input class="usa-input" id="last-name" name="last-name" type="text" required aria-required="true">
+        <input type="submit">
       </fieldset>
     </form>
 
@@ -128,6 +129,7 @@
     
         <label class="usa-label" for="zip">ZIP</label>
         <input class="usa-input usa-input--medium" id="zip" name="zip" type="text" pattern="[\d]{5}(-[\d]{4})?">
+        <input type="submit">
       </fieldset>
     </form>
 

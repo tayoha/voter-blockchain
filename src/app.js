@@ -111,8 +111,10 @@ App = {
   
     createTask: async () => {
       App.setLoading(true)
-      const content = $('#newTask').val()
-      await App.todoList.createTask(content)
+      const first_name = $('#first-name').val()
+      const middle_name = $('#middle-name').val()
+      const last_name = $('#last-name').val()
+      await App.Registration.createRegistration(0, first_name + " " + middle_name + " " + last_name, "03/08/1999", "429 Hamilton Pl. Ann Arbor, MI 48104", "Democrat", "Registration", "03:08:2020:12:26:30", "0000011234354", "1")
       window.location.reload()
     },
   
