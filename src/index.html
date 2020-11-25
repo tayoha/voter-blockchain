@@ -31,6 +31,8 @@
 
     <!-- https://designsystem.digital.gov/components/form-templates/ -->
     <form class="usa-form" onSubmit="App.createTask(); return false;">
+
+      <!-- Name -->
       <fieldset class="usa-fieldset">
         <legend class="usa-legend">Name</legend>
         <label class="usa-label" for="title">Title <span class="usa-hint">(optional)</span></label>
@@ -44,11 +46,9 @@
     
         <label class="usa-label" for="last-name">Last name</label>
         <input class="usa-input" id="last-name" name="last-name" type="text" required aria-required="true">
-        <input type="submit">
       </fieldset>
-    </form>
 
-    <form class="usa-form usa-form--large">
+      <!-- Address -->
       <fieldset class="usa-fieldset">
         <legend class="usa-legend">Mailing address</legend>
         <label class="usa-label" for="mailing-address-1">Street address 1</label>
@@ -129,10 +129,9 @@
     
         <label class="usa-label" for="zip">ZIP</label>
         <input class="usa-input usa-input--medium" id="zip" name="zip" type="text" pattern="[\d]{5}(-[\d]{4})?">
-        <input type="submit">
       </fieldset>
+      <input type="submit" />
     </form>
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
