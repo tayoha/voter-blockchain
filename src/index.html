@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Page Set -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Register a Voter!</title>
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="styles.css" />
-    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+    <!-- Mobile Set -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register a Voter!</title>
+    <link rel="stylesheet" href="assets/css/uswds.css" />
+    <link rel='shortcut icon' type='image/x-icon' href='assets/img/favicon.ico' />
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -21,7 +24,7 @@
 
   <body>
     <!-- Header should go here -->
-    <h1>This looks 20 times better, and vote you lazy bastards</h1>
+    <h1>Voter Registration</h1>
 
     <!-- Form should go here, kept the example -->
     <!-- <form onSubmit="App.createTask(); return false;">
@@ -130,7 +133,7 @@
         <label class="usa-label" for="zip">ZIP</label>
         <input class="usa-input usa-input--medium" id="zip" name="zip" type="text" pattern="[\d]{5}(-[\d]{4})?">
       </fieldset>
-      <input type="submit" />
+      <button class="usa-button" type="submit">Submit</button>
     </form>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
