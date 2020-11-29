@@ -2,31 +2,25 @@
 pragma solidity >=0.4.22 <0.8.0;
 
 contract Registration {
-    bool public valid;
-    string public name;
-    string public DOB;
-    string public addr;
-    string public party;
-    string public transaction_type;
-    uint public timestamp;
-    string public hashed_ident;
-    string public ident_type;
+  uint public voterCount = 0;
 
-    constructor() public {
-    }
+  struct Voter {
+    bool valid;
+    string name;
+    string DOB;
+    //string addr;
+    //string party;
+    string transaction_type;
+    //uint timestamp;
+    string hashed_ident;
+    string ident_type;
+  }
 
-    function createRegistration(bool _valid, string memory _name,string memory _DOB,string memory _addr,
-    string memory _party, string memory _transaction_type, uint _timestamp, string memory _hashed_ident,
-    string memory _ident_type) public {
-    	valid = _valid;
-        name = _name;
-        DOB = _DOB;
-        addr = _addr;
-        party = _party;
-        transaction_type = _transaction_type;
-        timestamp = _timestamp;
-        hashed_ident = _hashed_ident;
-        ident_type = _ident_type;
-    }
+  mapping(uint => Voter) public voters;
 
+  function createVoter(bool _valid, string memory _name, string memory _DOB, /*string memory _addr, string memory _party, */
+  string memory _transaction_type, /*uint _timestamp, */string memory _hashed_ident, string memory _ident_type) public {
+    voterCount ++;
+    voters[voterCount] = Voter(_valid, _name, _DOB, /*_addr, _party, */_transaction_type, /*_timestamp, */_hashed_ident, _ident_type);
+  }
 }
