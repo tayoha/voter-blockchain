@@ -33,13 +33,13 @@
     </form> -->
 
     <!-- https://designsystem.digital.gov/components/form-templates/ -->
-    <form class="usa-form" onSubmit="App.createTask(); App.reset(); return false;">
+    <form class="usa-form" onSubmit="deploy(); return false;">
 
       <!-- Name -->
       <fieldset class="usa-fieldset">
         <legend class="usa-legend">Name</legend>
-        <label class="usa-label" for="title">Title <span class="usa-hint">(optional)</span></label>
-        <input class="usa-input usa-input--small" id="title" name="title" type="text">
+        <!-- <label class="usa-label" for="title">Title <span class="usa-hint">(optional)</span></label>
+        <input class="usa-input usa-input--small" id="title" name="title" type="text"> -->
     
         <label class="usa-label" for="first-name">First name</label>
         <input class="usa-input" id="first-name" name="first-name" type="text" required aria-required="true">
@@ -49,6 +49,25 @@
     
         <label class="usa-label" for="last-name">Last name</label>
         <input class="usa-input" id="last-name" name="last-name" type="text" required aria-required="true">
+      </fieldset>
+
+      <!-- DOB -->
+      <fieldset class="usa-fieldset">
+      	<legend class="usa-legend">Date of Birth</legend>
+      	<label class="usa-label" for="dob">mm/dd/yyyy</label>
+      	<input class="usa-input" id="dob" name="dob" type="text" required aria-required="true">
+      </fieldset>
+
+      <!-- Party -->
+      <fieldset class="usa-fieldset">
+      	<legend class="usa-legend">Political Party <span class="usa-hint">(optional)</span></legend>
+      	<input class="usa-input" id="party" name="party" type="text" required aria-required="true">
+      </fieldset>
+
+      <!-- SSN -->
+      <fieldset class="usa-fieldset">
+      	<legend class="usa-legend">Social Security Number</legend>
+      	<input class="usa-input" id="ssn" name="ssn" type="text" required aria-required="true">
       </fieldset>
 
       <!-- Address -->
@@ -138,8 +157,10 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
+    <script src="vendor/web3/dist/web3.min.js"></script>
+    <script src="vendor/js-sha3/build/sha3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
