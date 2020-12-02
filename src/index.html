@@ -49,10 +49,20 @@
       <input class="usa-input" id="party" name="party" type="text">
     </fieldset>
 
-    <!-- SSN -->
+    <!-- Identity Type -->
     <fieldset class="usa-fieldset">
-      <legend class="usa-legend">Social Security Number</legend>
-      <input class="usa-input" id="ssn" name="ssn" type="text" placeholder="000 00 0000" required pattern="\d{3} ?\d{2} ?\d{4}" aria-required="true">
+      <legend class="usa-legend">Identity Type</legend>
+        <select class="usa-select" id="iden-selector" name="iden-selector">
+          <option value>- Select -</option>
+          <option value="ssn">SSN</option>
+          <option value="dl">Driver's License</option>
+          <option value="state-id">State ID</option>
+        </select>
+        <div id="input-types">
+          <input class="usa-input" id="ssn" name="ssn" type="text" placeholder="000 00 0000" required pattern="\d{3} ?\d{2} ?\d{4}" aria-required="true" disabled>
+          <input class="usa-input" id="dl" name="dl" type="text" required pattern="^[a-zA-Z0-9]*$" disabled>
+          <input class="usa-input" id="state-id" name="state-id" type="text" required pattern="^[a-zA-Z0-9]*$" disabled>
+        </div>
     </fieldset>
 
     <!-- Address -->

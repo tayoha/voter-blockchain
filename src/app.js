@@ -5,12 +5,18 @@ const transactionType = {
   DELETE: 2
 }
 
-const identityType = {
-  SSN: 'ssn',
-  DL: 'dl',
-  STATE_ID: 'state_id',
-  RESIDENCY: 'residency'
-}
+var idenType
+const idenSelector = document.getElementById('iden-selector')
+const inputTypes = document.getElementById('input-types')
+
+idenSelector.addEventListener('change', (event) => {
+  const inputField = document.getElementById(event.target.value)
+  idenType = event.target.value
+  inputTypes.querySelectorAll('.usa-input').forEach(input => {
+    input.setAttribute('disabled', true)
+  })
+  inputField.removeAttribute('disabled')
+})
 
 // TODO: deploy should take arguments from the front-end, i.e. deploy(name, dob, ...)
 const deploy = async () => {
@@ -24,7 +30,7 @@ const deploy = async () => {
   const address = document.getElementById('mailing-address-1').value + ' ' + document.getElementById('mailing-address-2').value + ' ' + document.getElementById('city').value + ', '
   + document.getElementById('state').value + ' ' + document.getElementById('zip').value
   const party = document.getElementById('party').value 
-  const ident = document.getElementById('ssn').value
+  const ident = document.getElementById(idenType).value
   var hash = sha3_256.create();
   hash.update(ident)
   hash.update('30458340')
@@ -41,7 +47,7 @@ const deploy = async () => {
       transactionType.CREATE,
       Date.now(),
       hashed_ident,
-      identityType.SSN
+      idenType
       )
     .send({ 'from': accounts[0], 'gas': '1000000' });
     window.location.reload(true);

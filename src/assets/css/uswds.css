@@ -5615,6 +5615,10 @@ button.usa-combo-box__clear-input:focus{
   position: relative;
 }
 
+.usa-input[disabled]{ 
+  display: none 
+}
+
 @media all and (min-width: 30em){
   .usa-form{
     max-width:40rem;
