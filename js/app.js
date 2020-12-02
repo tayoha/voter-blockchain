@@ -22,7 +22,7 @@ const deploy = async () => {
   // get form values
   const raw = await $.getJSON('/json/Registration.json')
   const abi = raw["abi"]
-  //const accounts = await web3.eth.getAccounts();
+  const accounts = await web3.eth.getAccounts();
   const first_name = document.getElementById('first-name').value
   const middle_name = document.getElementById('middle-name').value
   const last_name = document.getElementById('last-name').value
