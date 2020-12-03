@@ -39,7 +39,7 @@ const deploy = async () => {
   // push voter to blockchain
   // Contract address needs to be updated every call to migration
   // TODO: allow option for deleting voter or updating information
-  await new web3.eth.Contract(abi, '0x8D80260c018d11aee4cCA65f1cFF9E49160c04E2')
+  await new web3.eth.Contract(abi, '0xD7DA4BE45e4DFC0Af1d3ccB288dC5EE9a33D0489')
     .methods
     .createVoter(
       true,
