@@ -1,10 +1,4 @@
 const web3 = new Web3(new Web3.providers.HttpProvider('http://127.0.0.1:7545'))
-const transactionType = {
-  CREATE: 0,
-  UPDATE: 1,
-  DELETE: 2
-}
-
 var idenType
 const idenSelector = document.getElementById('iden-selector')
 const inputTypes = document.getElementById('input-types')
@@ -36,18 +30,20 @@ const deploy = async () => {
   hash.update(ident)
   hash.update('30458340')
   const hashed_ident = hash.hex()
+  const transaction_type = parseInt(document.getElementById('trans-type').value)
+  const valid = (transaction_type === 0 || transaction_type === 1) ? true : false
   // push voter to blockchain
   // Contract address needs to be updated every call to migration
   // TODO: allow option for deleting voter or updating information
-  await new web3.eth.Contract(abi, '0xD7DA4BE45e4DFC0Af1d3ccB288dC5EE9a33D0489')
+  await new web3.eth.Contract(abi, '0x8D80260c018d11aee4cCA65f1cFF9E49160c04E2')
     .methods
     .createVoter(
-      true,
+      valid,
       first_name + ' ' + middle_name + ' ' + last_name,
       dob,
       address,
       party,
-      transactionType.CREATE,
+      transaction_type,
       Date.now(),
       hashed_ident,
       idenType
@@ -61,13 +57,13 @@ const deploy = async () => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        "valid": 1,
+        "valid": valid,
         "first_name": first_name,
         "middle_name" : middle_name,
         "last_name": last_name,
         "dob": dob,
         "addr": address,
-        "transaction_type": transactionType.CREATE,
+        "transaction_type": transaction_type,
         "time_stamp": Date.now(),
         "hashed_ident": ident,
         "ident_type": idenType

@@ -24,6 +24,17 @@
   <!-- https://designsystem.digital.gov/components/form-templates/ -->
   <form class="usa-form" onSubmit="deploy(); return false;">
 
+    <!-- Transaction Type -->
+    <fieldset class="usa-fieldset">
+      <legend class="usa-legend">Transaction Type</legend>
+        <select class="usa-select" id="trans-type" name="trans-type">
+          <option value>- Select -</option>
+          <option value=0>Create</option>
+          <option value=1>Update</option>
+          <option value=2>Delete</option>
+        </select>
+    </fieldset>
+
     <!-- Name -->
     <fieldset class="usa-fieldset">
       <legend class="usa-legend">Name</legend>
